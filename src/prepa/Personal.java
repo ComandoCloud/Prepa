@@ -9,7 +9,9 @@ public class Personal {
     private String Apellido;
     private String CargoFuncion;
 
-    
+    public Personal(){
+        
+    }
     public Personal(String nom,String ape,String cf){//Contructor
     this.Nombre=nom;
     this.Apellido=ape;

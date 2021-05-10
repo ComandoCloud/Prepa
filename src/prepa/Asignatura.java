@@ -5,18 +5,15 @@
  */
 package prepa;
 
-/**
- *
- * @author Irene
- */
 public class Asignatura {
     private String Nombre;
     private double Nota;
     private int HorasCursadas;  
 
-    /**
-     * @return the Nombre
-     */
+    public Asignatura(){
+        
+    }
+    
     public String getNombre() {
         return Nombre;
     }

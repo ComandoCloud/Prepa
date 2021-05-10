@@ -7,12 +7,13 @@ public class Docente extends Personal  implements IHorasFacultad{
     private Asignatura mAsignatura[];
     
     public Docente (String nom,String ape, String cf,Asignatura mAsi[]){
-        
+        super(nom,ape,cf);// llama al constructor padre (clase personal)
+        this.mAsignatura = mAsi;
     }
     
     @Override
     public double CantHorasMensuales() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return 0;
     }
 
     public Asignatura[] getmAsignatura() {
