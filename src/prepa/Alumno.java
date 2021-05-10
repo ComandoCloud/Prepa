@@ -105,7 +105,7 @@ public class Alumno implements IHorasFacultad {
         for (int i = 0; i < this.mAsignaturas.length; i++) {
           horas = horas + this.mAsignaturas[i].getHorasCursadas();
        }
-        return horas;
+        return horas+40;
     }
     
     @Override  
