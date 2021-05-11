@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package prepa;
 
 /**
@@ -14,10 +9,6 @@ public class Alumno implements IHorasFacultad {
     private String Apellido;
     private long Dni;
     private Asignatura mAsignaturas[];
-
-    public Alumno(){
-        
-    }
     
     public Alumno(String nom, String ape, long dni, Asignatura mAsig[]){
         Nombre = nom;
@@ -50,51 +41,30 @@ public class Alumno implements IHorasFacultad {
         return Nombre;
     }
 
-    /**
-     * @param Nombre the Nombre to set
-     */
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
     }
 
-    /**
-     * @return the Apellido
-     */
     public String getApellido() {
         return Apellido;
     }
 
-    /**
-     * @param Apellido the Apellido to set
-     */
     public void setApellido(String Apellido) {
         this.Apellido = Apellido;
     }
 
-    /**
-     * @return the Dni
-     */
     public long getDni() {
         return Dni;
     }
 
-    /**
-     * @param Dni the Dni to set
-     */
     public void setDni(long Dni) {
         this.Dni = Dni;
     }
 
-    /**
-     * @return the mAsignaturas
-     */
     public Asignatura[] getmAsignaturas() {
         return mAsignaturas;
     }
 
-    /**
-     * @param mAsignaturas the mAsignaturas to set
-     */
     public void setmAsignaturas(Asignatura[] mAsignaturas) {
         this.mAsignaturas = mAsignaturas;
     }
@@ -105,7 +75,7 @@ public class Alumno implements IHorasFacultad {
         for (int i = 0; i < this.mAsignaturas.length; i++) {
           horas = horas + this.mAsignaturas[i].getHorasCursadas();
        }
-        return horas+40;
+        return horas;
     }
     
     @Override  
@@ -114,7 +84,17 @@ public class Alumno implements IHorasFacultad {
         System.out.println("finalize method called");   
     }   
     
-    
-   
-    
+    public String ToString (){
+        String resultado="";
+        for (int i = 0; i < mAsignaturas.length; i++) {
+            if(mAsignaturas[i].getNota()>=7)
+              resultado= resultado+"\n" + "MATERIA: "+ mAsignaturas[i].getNombre()+ " NOTA: "+ mAsignaturas[i].getNota();       
+        }
+        return resultado;
+    }
+    /**no realizamos el punto e pq nos pide volver a usar el método ToString 
+     que ya utilizamos para el punto d.e- Mostrar para cada alumno su promedio 
+     y las horas cursadas(utilizar el método
+       toString) .
+     */
 }
